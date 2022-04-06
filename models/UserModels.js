@@ -1,3 +1,4 @@
+const { boolean } = require('joi');
 const mongoose = require('mongoose');
 const userModels = mongoose.model(
     "userData",
@@ -8,7 +9,8 @@ const userModels = mongoose.model(
         sexe : {type:String, require:true},
         userMail : {type:String, require:true},
         userPass : {type:String, require:true},
-        date :{type:Date, default:Date.now}
+        date :{type:Date, default:Date.now},
+        checked:{type:Boolean, require:true}
     },
    "tableData" 
 );
