@@ -1,7 +1,7 @@
 const { boolean } = require('joi');
 const mongoose = require('mongoose');
 const userModels = mongoose.model(
-    "userData",
+    "user",
     {
         nom: {type:String, require: true},
         prenom : {type:String, require:true},
@@ -12,7 +12,7 @@ const userModels = mongoose.model(
         date :{type:Date, default:Date.now},
         checked:{type:Boolean, require:true}
     },
-   "tableData" 
+   "users" 
 );
 
 module.exports = {userModels};
